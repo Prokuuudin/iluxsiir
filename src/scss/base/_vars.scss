@@ -1,0 +1,30 @@
+:root {
+	--container-width: 1440px;
+	--container-padding: 15px;
+
+	--font-main: sans-serif;
+	--font-accent: 'Manrope', sans-serif;
+	--font-titles: var(--font-accent);
+	--font-titles2: 'bebasneueregular', sans-serif;
+
+	--page-bg: #fff;
+	--text-color: #000;
+	--accent: #b52670;
+	--accent-2: #00205B;
+	--link-color: #000;
+	--bg-color: rgb(128, 128, 128, 0.15);
+
+	--swiper-theme-color: var(--accent);
+	--swiper-navigation-color: var(--accent);
+	--swiper-navigation-size: 25px;
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}
+

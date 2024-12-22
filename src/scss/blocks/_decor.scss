@@ -1,0 +1,9 @@
+.decor--elem-logo_no-bg{
+	width: 100px;
+	height: 100px;
+	@include mobile {
+        width: 70px;
+        height: 70px;
+    }
+}
+

@@ -1,0 +1,112 @@
+.about{
+    padding-top: 45px;
+    width: 100%;
+    // height: 100vh;     
+    background-image: url('./../../img/bg-01.jpg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    @include mobile {
+        background-position: -620px center; /* x y */
+        height: 100vh;
+    }
+
+    @include mediaBg(){
+		background-image: url('./../../img/bg-01@2x.jpg');
+	}
+ }
+ 
+.about::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.15;      
+}
+
+ .about__flex{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-top: 70px;
+    color: #fff;
+
+       @include mobile {        
+        flex-direction: column;
+        align-items: center;
+    }       
+}
+
+ .about__desc {
+    width: 50%;
+    height: 600px; 
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    
+    @include tablet {
+        gap: 0;
+        height: auto;
+    }
+    @include mobile {
+        width: 100%;
+        
+    }
+ }
+
+.about__text {
+     display: flex;
+     margin-top: 110px;
+     font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem) ;
+     line-height: 1.4;
+     text-align: center;
+     z-index: 1;
+
+     @include mobile {
+         margin-top: 135px;
+     }
+}
+
+.about__btns{
+    width: 100%;    
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    
+    @include tablet {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+.about__btns_company-btn{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    z-index: 1;       
+}
+
+.about__shop{
+    display: flex;
+    flex-direction: column;
+    text-align: center;    
+}
+
+.about__btns_shop-btn{
+    display: flex;
+    text-align: center;
+    z-index: 1;
+}
+ 
+     
+    
+   

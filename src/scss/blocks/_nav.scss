@@ -1,0 +1,26 @@
+.nav a {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--accent-2);
+	transition: all 0.2s ease-in;
+	
+	&:hover{
+		scale: 1.05;
+	}
+	@include tablet {
+		font-size: 13px;
+	}
+@include mobile {
+	display: none;
+	}
+}
+
+.nav__list {
+	display: flex;
+	column-gap: 25px;
+
+	@include tablet {
+		gap: 15px;
+	}
+}
