@@ -23,6 +23,11 @@ a.btn {
 		scale: 1.05;
 	}
 
+	@include tablet {
+		font-size: 16px;
+		padding: 10px 8px;
+	}
+
 	@include mobile {
 		padding: 8px 9px;
 		min-width: unset;
