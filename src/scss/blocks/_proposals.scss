@@ -55,13 +55,17 @@ h2.proposals__title.title-2 {
     position: relative;
     background-color: var(--bg-color);
     border-radius: 25px;   
-    line-height: 1.5;       
+    line-height: 1.5;
+   
 }
+
 .proposals__customers{
     @include mobile {
         padding-top: 0;
+        margin-bottom: 40px;
     }
 }
+
 
 .proposals__customers-text,
 .proposal__corporates-text {
@@ -94,8 +98,10 @@ h2.proposals__title.title-2 {
  .btn-shop, 
  .btn-eshop, 
  .btn-form {
+    position: relative;
+
     @include tablet {
-        font-size: 14px;
+        font-size: 14px;       
     }
  }
  
