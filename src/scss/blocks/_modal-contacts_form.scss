@@ -42,9 +42,6 @@
     opacity: 0;
     transition: all 0.8s ease-in;
 
-    @include mobile {
-        padding: 0;
-    }
 }
 
 .modal-form__body::-webkit-scrollbar{
@@ -52,9 +49,9 @@
 }
 .modal-form__body::-webkit-scrollbar-track{
     background:pink;
-    border-radius: 0 15px 15px 0;
-    
+    border-radius: 0 15px 15px 0;    
 }
+
 .modal-form__body::-webkit-scrollbar-thumb{
     background:var(--accent);
     border-radius: 5px;
@@ -114,6 +111,7 @@
     text-transform: none;
     color: var(--accent-2);
     letter-spacing: 7.7px !important;
+    padding: 0 40px;   
 }
 
 .modal-form__text {
@@ -144,7 +142,7 @@
     @include mobile {
         height: 80px;
         font-size: 16px;
-        margin-bottom: 20px;    
+        margin-bottom: 10px;    
 }
 
     
@@ -230,8 +228,9 @@
     margin-bottom: 20px;
 
     @include mobile {
-        margin-top: 20px;
-      
+        margin-top: 30px;
+        font-size: 14px;
+        line-height: 1;      
     }
 }
 
@@ -257,8 +256,6 @@
     content: "✔";
     color: #fff;
     font-size: 16px;
-    // width: 18px;
-    // height: 18px;
     position: absolute;
     border-radius: 4px;
     text-align: center;
@@ -266,8 +263,7 @@
     left: 10px;
     font-weight: bold;
     transform: scale(0);
-    transition: all 0.2s ease-in;  
-
+    transition: all 0.2s ease-in;
 }
 
 .form__footer{
@@ -278,15 +274,16 @@
     display: flex;
     justify-content:space-around;
     align-items: center;
-    gap: 20px 60px;    
+    gap: 60px;    
     
     @include mobile {
         max-width: 300px;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        // overflow: hidden;
+        margin-top: 55px;
         padding: 0;
+        gap: 20px;
     }
 }
  
