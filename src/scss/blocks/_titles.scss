@@ -53,6 +53,10 @@
 	font-size: 18px;
 	font-weight: 700;
 	font-family: var(--font-titles);
+
+	@include mobile {
+		font-size: 16px;
+	}
 }
 .colored{
 	color: var(--accent);
