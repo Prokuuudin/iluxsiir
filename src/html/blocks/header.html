@@ -22,20 +22,20 @@
             </div> 
             <nav class="header__nav nav">
                 <ul class="nav__list">
-                    <li><a href="#about" class="active hover-underline-animation center">о нас</a></li>
-                    <li><a href="#brands" class="hover-underline-animation center">Бренды</a></li>
-                    <li><a href="#proposals" class="hover-underline-animation center">Для клиентов</a></li>
-                    <li><a href="https://shopforhair.ee/ee/" target="_blank" class="hover-underline-animation center">интернет-магазин</a></li>
-                    <li><a href="#contacts" class="hover-underline-animation center">Контакты</a></li>
+                    <li><a href="#about" data-key="about-us" class="active hover-underline-animation center">о нас</a></li>
+                    <li><a href="#brands" data-key="brands" class="hover-underline-animation center">Бренды</a></li>
+                    <li><a href="#proposals" data-key="for-clients" class="hover-underline-animation center">Для клиентов</a></li>
+                    <li><a href="https://shopforhair.ee/ee/" target="_blank" data-key="online-store" class="hover-underline-animation center">интернет-магазин</a></li>
+                    <li><a href="#contacts" data-key="contacts" class="hover-underline-animation center">Контакты</a></li>
                 </ul>
             </nav>
            
             <div class="switcher-wrapper">
-                <input type="radio" name="lang" id="lang-ee" />
+                <input type="radio" name="language" value="ee" id="lang-ee" />
                 <label class="switcher" for="lang-ee">Ee</label>
-                <input type="radio" name="lang" id="lang-eng" />
+                <input type="radio" name="language" value="en" id="lang-eng" />
                 <label class="switcher" for="lang-eng">En</label>
-                <input type="radio" name="lang" id="lang-ru" checked />
+                <input type="radio" name="language" value="ru" id="lang-ru" checked />
                 <label class="switcher" for="lang-ru">Ru</label>                             
                 <span class="lang-placeholder"></span>
             </div>           

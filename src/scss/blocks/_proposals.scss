@@ -44,8 +44,20 @@ h2.proposals__title.title-2 {
     }
 }
 
-.proposals__corporates, 
-.proposals__customers {
+.proposals__corporates {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: var(--bg-color);
+    border-radius: 25px;   
+    line-height: 1.5;   
+}
+
+.proposals__customers{
     display: flex;
     padding: 20px;
     flex-direction: column;
@@ -56,10 +68,7 @@ h2.proposals__title.title-2 {
     background-color: var(--bg-color);
     border-radius: 25px;   
     line-height: 1.5;
-   
-}
 
-.proposals__customers{
     @include mobile {
         padding-top: 0;
         margin-bottom: 40px;

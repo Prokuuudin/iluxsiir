@@ -6,10 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta
 			name="description"
+			data-key="desc-content"
 			content="профессиональные средства для ухода за волосами и ногтями, оптом и в розницу, частным и корпоративным клиентам, интернет-магазин с доставкой в Таллинне"
 		/>
-		<meta name="keywords" content="волосы, ногти, средства для ухода, доставка, Таллинн, профессиональным мастерам, предложение салонам" />
-		<title>ILUXSIIR hair & nail professional cosmetic</title>
+		<meta name="keywords" data-key="keywords-content" content="волосы, ногти, средства для ухода, доставка, Таллинн, профессиональным мастерам, предложение салонам" />
+		<title data-key="landing-title">ILUXSIIR hair & nail professional cosmetic</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png" />
@@ -47,20 +48,20 @@
 					</div>
 					<nav class="header__nav nav">
 						<ul class="nav__list">
-							<li><a href="#about" class="active hover-underline-animation center">о&#160;нас</a></li>
-							<li><a href="#brands" class="hover-underline-animation center">Бренды</a></li>
-							<li><a href="#proposals" class="hover-underline-animation center">Для клиентов</a></li>
-							<li><a href="https://shopforhair.ee/ee/" target="_blank" class="hover-underline-animation center">интернет-магазин</a></li>
-							<li><a href="#contacts" class="hover-underline-animation center">Контакты</a></li>
+							<li><a href="#about" data-key="about-us" class="active hover-underline-animation center">о&#160;нас</a></li>
+							<li><a href="#brands" data-key="brands" class="hover-underline-animation center">Бренды</a></li>
+							<li><a href="#proposals" data-key="for-clients" class="hover-underline-animation center">Для клиентов</a></li>
+							<li><a href="https://shopforhair.ee/ee/" target="_blank" data-key="online-store" class="hover-underline-animation center">интернет-магазин</a></li>
+							<li><a href="#contacts" data-key="contacts" class="hover-underline-animation center">Контакты</a></li>
 						</ul>
 					</nav>
 
 					<div class="switcher-wrapper">
-						<input type="radio" name="lang" id="lang-ee" />
+						<input type="radio" name="language" value="ee" id="lang-ee" />
 						<label class="switcher" for="lang-ee">Ee</label>
-						<input type="radio" name="lang" id="lang-eng" />
+						<input type="radio" name="language" value="en" id="lang-eng" />
 						<label class="switcher" for="lang-eng">En</label>
-						<input type="radio" name="lang" id="lang-ru" checked />
+						<input type="radio" name="language" value="ru" id="lang-ru" checked />
 						<label class="switcher" for="lang-ru">Ru</label>
 						<span class="lang-placeholder"></span>
 					</div>
@@ -76,15 +77,15 @@
 					<source srcset="./img/cookie-fill.png 1x, ./img/cookie-fill@2x.png 2x" type="image/png" />
 					<img src="./img/cookie-fill.png" alt="cookie-img" />
 				</picture>
-				<span>Мы&#160;ценим вашу приватность</span>
+				<span data-key="agreement-header">Мы&#160;ценим вашу приватность</span>
 			</div>
-			<p>
+			<p data-key="agreement-text">
 				Мы&#160;используем файлы cookie, чтобы улучшить качество ваших просмотров, персонализируя для вас рекламу и&#160;контент на&#160;основе анализа трафика. Нажимая
 				&#171;Принять&#187;, вы&#160;соглашаетесь с&#160;использованием файлов cookie.
 				<a href="./files/agreement-Iluxsiir_ru.pdf" target="_blank">Политика сookie.</a>
 			</p>
-			<button class="accept-btn" id="accept">Принять</button>
-			<button class="reject-btn">Отклонить</button>
+			<button data-key="accept-btn" class="accept-btn" id="accept">Принять</button>
+			<button data-key="reject-btn" class="reject-btn">Отклонить</button>
 		</div>
 
 		<main class="main">
@@ -93,21 +94,20 @@
 					<div class="about__flex">
 						<div class="about__desc">
 							<div class="title-1 about__title ">Ilu<span class="colored">x</span>siir</div>
-							<h1 class="about__text">Профессиональные средства для ухода за&#160;волосами и&#160;ногтями</h1>
+							<h1 data-key="description" class="about__text">Профессиональные средства для ухода за&#160;волосами и&#160;ногтями</h1>
 							<div class="about__btns">
 								<div class="about__btns_company-btn">
-									<a href="#" class="open-info-btn btn btn-company"> Больше об&#160;Ilu<span class="colored">X</span>siir </a>
+									<a href="#" class="open-info-btn btn btn-company"
+										><span data-key="info-btn">Больше об&#160;Ilu<span class="colored">X</span>siir</span>
+									</a>
 								</div>
 								<div class="about__shop">
 									<div class="about__btns_shop-btn">
-										<a href="#" class="open-shop-btn btn btn-shop" id="open-shop">Магазин в <span class="colored">Т</span>аллинне </a>
+										<a href="#" data-key="shop-btn" class="open-shop-btn btn btn-shop" id="open-shop">Магазин в&#160;<span class="colored">Т</span>аллинне </a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- <div class="about__partnership">
-                <a  class="about__partnership-btn" href="#!"><button class="open-form-btn"><p>Cвязаться с Ilu<span class="colored">X</span>siir для сотрудничества</p></button></a>
-            </div> -->
 					</div>
 				</div>
 
@@ -115,8 +115,8 @@
 					<div class="modal-info__container">
 						<div id="modal-info__body" class="modal-info__body">
 							<div class="modal-info__content">
-								<h3 class="title-3 modal-info__title">О&#160;компании Ilu<span class="colored">X</span>siir</h3>
-								<div class="modal-info__text">
+								<h3 data-key="info-title" class="title-3 modal-info__title">О&#160;компании Ilu<span class="colored">X</span>siir</h3>
+								<div data-key="info-text" class="modal-info__text">
 									<p>
 										Компания Iluxsiir O&#220; основана в&#160;2023 году и&#160;занимается оптовой и&#160;розничной торговлей профессиональными средствами для
 										ухода за&#160;волосами и&#160;ногтями. На&#160;рынке Эстонии мы&#160;представлены через услуги интернет-магазина https://shopforhair.ee/ee/.
@@ -166,8 +166,8 @@
 					<div class="modal-shop__container">
 						<div id="modal-shop__body" class="modal-shop__body">
 							<div class="modal-shop__content">
-								<h2 class="title-2 modal-shop__title">Ilu<span class="colored">x</span>siir</h2>
-								<p class="modal-shop__desc">
+								<h2 data-key="shop-title" class="title-2 modal-shop__title">Ilu<span class="colored">x</span>siir</h2>
+								<p data-key="shop-text" class="modal-shop__desc">
 									Мы&#160;рады приветствовать вас в&#160;первом магазине Iluxsiir O&#220; в&#160;Эстонии&#160;&#8212; в&#160;торговом центре Мустакиви.
 									С&#160;удовольствием предлагаем ознакомиться с&#160;нашими товарами, среди которых каждый найдет себе то, что ищет&#160;&#8212; как
 									самостоятельно, так и&#160;с&#160;помощью наших опытных консультантов. Если какого-то из&#160;товаров нет на&#160;месте, вы&#160;можете оформить
@@ -176,17 +176,17 @@
 								</p>
 								<div class="shop-info">
 									<div class="shop-info__items">
-										<div class="shop-info__address">
+										<div data-key="address" class="shop-info__address">
 											адрес: Mahtra 1, Tallinn, Estonia
 										</div>
-										<div class="shop-info__tel">тел. офиса: <a href="tel:+37255947591">+372 55-947-591</a></div>
-										<div class="shop-info__tel">тел. магазина: <a href="tel:+37255940771">+372 55-940-771</a></div>
-										<div class="shop-info__email">почта: <a href="mailto:office@iluxsiir.ee">office@iluxsiir.ee</a></div>
-										<div class="shop-info__working-time">
+										<div data-key="office-telephone" class="shop-info__tel">тел. офиса: <a href="tel:+37255947591">+372 55-947-591</a></div>
+										<div data-key="shop-telephone" class="shop-info__tel">тел. магазина: <a href="tel:+37255940771">+372 55-940-771</a></div>
+										<div data-key="office-email" class="shop-info__email">почта: <a href="mailto:office@iluxsiir.ee">office@iluxsiir.ee</a></div>
+										<div data-key="working-time" class="shop-info__working-time">
 											Пн-Пт: 10.00&#160;&#8212; 20.00 <br />
 											Сб-Вск: 10.00&#160;&#8212; 18.00
 										</div>
-										<div class="shop-info__map-on-place">
+										<div data-key="find-inside" class="shop-info__map-on-place">
 											<a href="https://mustakivikeskus.ee/plaan/?location=store3030" target="_blank"> Найти нас внутри торгового центра</a>
 										</div>
 									</div>
@@ -229,9 +229,9 @@
 							</div>
 							<div class="benefits__icon-text">
 								<div class="benefits__item-title">
-									<h3 class="title-4">Богатый ассортимент</h3>
+									<h3 data-key="card1-title" class="title-4">Богатый ассортимент</h3>
 								</div>
-								<p class="benefits__item-desc">Более 3500 товаров от&#160;десятков мировых и&#160;европейских брендов</p>
+								<p data-key="card1-text" class="benefits__item-desc">Более 3500 товаров от&#160;десятков мировых и&#160;европейских брендов</p>
 							</div>
 						</li>
 						<li class="benefits__item">
@@ -242,9 +242,9 @@
 							</div>
 							<div class="benefits__icon-text">
 								<div class="benefits__item-title">
-									<h3 class="title-4">Актуальные предложения</h3>
+									<h3 data-key="card2-title" class="title-4">Актуальные предложения</h3>
 								</div>
-								<p class="benefits__item-desc">Новинки рынка и&#160;последние тренды всегда к&#160;вашим услугам</p>
+								<p data-key="card2-text" class="benefits__item-desc">Новинки рынка и&#160;последние тренды всегда к&#160;вашим услугам</p>
 							</div>
 						</li>
 						<li class="benefits__item">
@@ -255,9 +255,9 @@
 							</div>
 							<div class="benefits__icon-text">
 								<div class="benefits__item-title">
-									<h3 class="title-4">Открытость и&#160;доступность</h3>
+									<h3 data-key="card3-title" class="title-4">Открытость и&#160;доступность</h3>
 								</div>
-								<p class="benefits__item-desc">Работаем без выходных&#160;&#8212; как в&#160;сети, так и&#160;в&#160;магазине</p>
+								<p data-key="card3-text" class="benefits__item-desc">Работаем без выходных&#160;&#8212; как в&#160;сети, так и&#160;в&#160;магазине</p>
 							</div>
 						</li>
 						<li class="benefits__item">
@@ -268,9 +268,11 @@
 							</div>
 							<div class="benefits__icon-text">
 								<div class="benefits__item-title">
-									<h3 class="title-4">Быстрая доставка</h3>
+									<h3 data-key="card4-title" class="title-4">Быстрая доставка</h3>
 								</div>
-								<p class="benefits__item-desc">Пакоматы Omniva/Venipak&#160;&#8212; 24 часа. Если товара нет на&#160;месте&#160;&#8212; в&#160;течение 3 суток</p>
+								<p data-key="card4-text" class="benefits__item-desc">
+									Пакоматы Omniva/Venipak&#160;&#8212; 24 часа. Если товара нет на&#160;месте&#160;&#8212; в&#160;течение 3 суток
+								</p>
 							</div>
 						</li>
 						<li class="benefits__item">
@@ -281,9 +283,9 @@
 							</div>
 							<div class="benefits__icon-text">
 								<div class="benefits__item-title">
-									<h3 class="title-4">Профессиональные консультации</h3>
+									<h3 data-key="card5-title" class="title-4">Профессиональные консультации</h3>
 								</div>
-								<p class="benefits__item-desc">Помощь в&#160;выборе товаров от&#160;опытного персонала</p>
+								<p data-key="card5-text" class="benefits__item-desc">Помощь в&#160;выборе товаров от&#160;опытного персонала</p>
 							</div>
 						</li>
 					</ul>
@@ -293,7 +295,7 @@
 				<div class="container">
 					<div class="brands__title-group title-group">
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
-						<h2 class="title-2 brands__title">Наши бренды</h2>
+						<h2 data-key="brands-title" class="title-2 brands__title">Наши бренды</h2>
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
 					</div>
 
@@ -649,7 +651,7 @@
 							</div>
 						</div>
 						<div class="visual__desc">
-							<p class="visual__desc-text">
+							<p data-key="visuals-text" class="visual__desc-text">
 								Магазин в&#160;торговом центре &#171;Mustakivi&#187; (Таллинн). Свыше 3 500 товаров на&#160;месте. Возможность дополнительных заказов по&#160;каталогу
 								с&#160;доставкой.
 							</p>
@@ -661,41 +663,41 @@
 				<div class="container">
 					<div class="proposals__title-group title-group">
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
-						<h2 class="title-2 proposals__title">Предложения для клиентов</h2>
+						<h2 data-key="proposals-title" class="title-2 proposals__title">Предложения для клиентов</h2>
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
 					</div>
 
 					<div class="proposals__wrapper">
 						<div class="proposals__customers">
-							<h3 class="title-3 proposals__customers-title">частным клиентам</h3>
+							<h3 data-key="for-customers-title" class="title-3 proposals__customers-title">частным клиентам</h3>
 							<div class="proposals__customers-text">
-								<p>
+								<p data-key="for-customers-text">
 									Частным клиентам мы&#160;предлагаем широкий ассортимент товаров от&#160;известных европейских брендов. В&#160;магазине в&#160;торговом центре
 									Мустакиви (Mahtra 1, Tallinn) вы&#160;получите исчерпывающие консультации по&#160;любой из&#160;позиций. Ознакомиться со&#160;всеми предложениями
 									можно, пройдя по&#160;ссылке на&#160;интернет-магазин.
 								</p>
 							</div>
 							<div class="proposals__customers-btns">
-								<a class="btn btn-eshop" href="https://shopforhair.ee/ee/" target="_blank">
+								<a data-key="to-eshop-btn" class="btn btn-eshop" href="https://shopforhair.ee/ee/" target="_blank">
 									Перейти в&#160;интернет-магазин
 								</a>
-								<a class="btn btn-shop open-shop-btn" href="#!">
+								<a data-key="to-shop-btn" class="btn btn-shop open-shop-btn" href="#!">
 									Перейти в&#160;магазин в&#160;Таллине
 								</a>
 							</div>
 						</div>
 
 						<div class="proposals__corporates">
-							<h3 class="title-3 proposal__corporates-title">корпоративным клиентам</h3>
+							<h3 data-key="for-corporates-title" class="title-3 proposal__corporates-title">корпоративным клиентам</h3>
 							<div class="proposal__corporates-text">
-								<p>
+								<p data-key="for-corporates-text">
 									Для корпоративных клиентов предусмотрены специальные, особенно выгодные условия, акции и&#160;предложения. Чтобы получить более подробную
 									информацию, вы&#160;можете связаться с&#160;нами по&#160;телефону, электронной почте или заполнив форму с&#160;интересующим вас вопросом. Наши
 									менеджеры ответят на&#160;ваше письмо в&#160;течение самого ближайшего времени.
 								</p>
 							</div>
 							<div class="proposals__corporates__btns">
-								<a class="btn btn-form" href="#contacts">
+								<a data-key="connect-with-btn" class="btn btn-form" href="#contacts">
 									Связаться с&#160;менеджером
 								</a>
 							</div>
@@ -707,7 +709,7 @@
 				<div class="container ">
 					<div class="contacts__title-group title-group">
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
-						<h2 class="title-2">Контакты</h2>
+						<h2 data-key="contacts-title" class="title-2">Контакты</h2>
 						<img class="decor--elem-logo_no-bg" src="./img/svgdecors/logo_elem_no-bg.svg" alt="" />
 					</div>
 
@@ -733,7 +735,7 @@
 												<use href="./img/svgsprite/sprite.symbol.svg#phone"></use>
 											</svg>
 											<div class="contacts__list-item-desc">
-												<p>+372 55-947-591 офис</p>
+												<p>+372 55-947-591 <span data-key="office">офис</span></p>
 											</div>
 										</div>
 									</a>
@@ -758,7 +760,7 @@
 												<use href="./img/svgsprite/sprite.symbol.svg#phone"></use>
 											</svg>
 											<div class="contacts__list-item-desc">
-												<p>+372 55-940-771 магазин</p>
+												<p>+372 55-940-771 <span data-key="shop">магазин</span></p>
 											</div>
 										</div>
 									</a>
@@ -767,9 +769,9 @@
 						</div>
 
 						<div class="contacts__connect">
-							<h4 class="title-4 contacts__connect-title">Связаться c&#160;Ilu<span class="colored">X</span>siir через форму:</h4>
+							<h4 data-key="connect-form-title" class="title-4 contacts__connect-title">Связаться c&#160;Ilu<span class="colored">X</span>siir через форму:</h4>
 							<div class="contacts__connect-btn">
-								<a class="open-form-btn btn open-btn" href="#!">
+								<a data-key="fill-form-btn" class="open-form-btn btn open-btn" href="#!">
 									Заполнить форму
 								</a>
 							</div>
@@ -779,29 +781,29 @@
 						<div class="modal-form__container">
 							<div id="modal-form__body" class="modal-form__body">
 								<div class="modal-form__content">
-									<h3 class="title-3 modal-form__title">Связаться с&#160;ILU<span class="colored">X</span>SIIR</h3>
+									<h3 data-key="form-title" class="title-3 modal-form__title">Связаться с&#160;ILU<span class="colored">X</span>SIIR</h3>
 									<div class="modal-form__fields">
 										<form action="#" method="post" id="form" class="form" name="form" enctype="multipart/form-data" autocomplete="on">
 											<div class="form-group">
 												<input type="text" name="name" id="formName" class="form__input _req" />
-												<label for="formName" class="form__label">Ваше имя*</label>
+												<label data-key="placeholder-name" for="formName" class="form__label">Ваше имя*</label>
 											</div>
 											<div class="form-group">
 												<input type="text" name="email" id="formEmail" class="form__input _req _email" />
-												<label for="formEmail" class="form__label">Ваша почта*</label>
+												<label data-key="placeholder-email" for="formEmail" class="form__label">Ваша почта*</label>
 											</div>
 											<div class="form-group">
 												<input type="tel" name="tel" id="formTel" class="form__input _req" />
-												<label for="formTel" class="form__label">Ваш телефон*</label>
+												<label data-key="placeholder-phone" for="formTel" class="form__label">Ваш телефон*</label>
 											</div>
 											<div class="form-group">
 												<label for="formMesssge" class="form__input"></label>
-												<textarea id="formMesssge" name="message" placeholder="Ваше сообщение"></textarea>
+												<textarea data-key="placeholder-textarea" id="formMesssge" name="message" placeholder="Ваше сообщение"></textarea>
 											</div>
 											<div class="form-group">
 												<input id="formAgreement" type="checkbox" name="agreement" class="checkbox__input _req " />
 												<label for="formAgreement" class="checkbox__label"
-													><span
+													><span data-key="users-agreement"
 														>Я&#160;принимаю условия <a href="./files/agreement-Iluxsiir_ru.pdf" target="_blank">политики конфиденциальности </a>компании
 														и&#160;даю согласие на&#160;обработку своих персональных данных.</span
 													></label
@@ -809,7 +811,7 @@
 											</div>
 											<div class="form__footer">
 												<div class="g-recaptcha" data-sitekey="6LeJwZUqAAAAAMrbxL2n3XUKihLOCFePHqIpYQR9"></div>
-												<button type="submit" class="btn form__button">Отправить</button>
+												<button data-key="submit-btn" type="submit" class="btn form__button">Отправить</button>
 											</div>
 										</form>
 									</div>
@@ -852,9 +854,7 @@
 						</div>
 					</div>
 					<div class="footer__right-side">
-						<div class="footer__copyright">
-							Copyright &#169; 2024. Все права защищены
-						</div>
+						<div class="footer__copyright">Copyright &#169; 2024. <span data-key="all-rights">Все права защищены</span></div>
 					</div>
 				</div>
 			</div>

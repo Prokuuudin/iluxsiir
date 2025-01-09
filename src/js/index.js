@@ -1,3 +1,6 @@
+import setLanguage from './modules/setLanguage.js';
+setLanguage();
+
 import getSwiper1 from './modules/swiper1.js';
 getSwiper1();
 
@@ -24,3 +27,4 @@ getSwiperWave();
 
 import getCookiesConsent from './modules/agreement-cookies.js';
 getCookiesConsent();
+
