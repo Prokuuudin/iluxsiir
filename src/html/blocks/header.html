@@ -1,9 +1,9 @@
-<header class="header" id="top" >
+<header class="header" id="top">
     <div class="container">
-        <div class="header__row ">            
-                <a href="#about" class="logo">
-                    <img src="./../../img/logo.png" srcset="./../../img/logo@2x.png" alt="logo">
-                </a>                        
+        <div class="header__row ">
+            <a href="#about" class="logo">
+                <img src="./../../img/logo.png" srcset="./../../img/logo@2x.png" alt="logo">
+            </a>
             <div class="header__links_socials">
                 <a href="https://www.facebook.com/profile.php?id=61566023952182" target="_blank">
                     <abbr title="facebook">
@@ -19,28 +19,34 @@
                         </svg>
                     </abbr>
                 </a>
-            </div> 
+            </div>
             <nav class="header__nav nav">
                 <ul class="nav__list">
-                    <li><a href="#about" data-key="about-us" class="active hover-underline-animation center">о нас</a></li>
+                    <li><a href="#about" data-key="about-us" class="active hover-underline-animation center">о нас</a>
+                    </li>
                     <li><a href="#brands" data-key="brands" class="hover-underline-animation center">Бренды</a></li>
-                    <li><a href="#proposals" data-key="for-clients" class="hover-underline-animation center">Для клиентов</a></li>
-                    <li><a href="https://shopforhair.ee/ee/" target="_blank" data-key="online-store" class="hover-underline-animation center">интернет-магазин</a></li>
-                    <li><a href="#contacts" data-key="contacts" class="hover-underline-animation center">Контакты</a></li>
+                    <li><a href="#proposals" data-key="for-clients" class="hover-underline-animation center">Для
+                            клиентов</a></li>
+                    <li><a href="https://shopforhair.ee/ee/" target="_blank" data-key="online-store"
+                            class="hover-underline-animation center">интернет-магазин</a></li>
+                    <li><a href="#contacts" data-key="contacts" class="hover-underline-animation center">Контакты</a>
+                    </li>
                 </ul>
             </nav>
-           
+
             <div class="switcher-wrapper">
                 <input type="radio" name="language" value="ee" id="lang-ee" />
                 <label class="switcher" for="lang-ee">Ee</label>
                 <input type="radio" name="language" value="en" id="lang-eng" />
                 <label class="switcher" for="lang-eng">En</label>
                 <input type="radio" name="language" value="ru" id="lang-ru" checked />
-                <label class="switcher" for="lang-ru">Ru</label>                             
+                <label class="switcher" for="lang-ru">Ru</label>
                 <span class="lang-placeholder"></span>
-            </div>           
-           
+            </div>
+            <button class="mobile-nav-btn">
+                <div class="nav-icon"></div>
+            </button>
         </div>
-       <hr>
     </div>
 </header>
+@@include('mobile-nav.html')

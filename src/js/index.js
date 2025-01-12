@@ -1,6 +1,9 @@
 import setLanguage from './modules/setLanguage.js';
 setLanguage();
 
+import mobileNav from './modules/mobile-nav.js';
+mobileNav();
+
 import getSwiper1 from './modules/swiper1.js';
 getSwiper1();
 
