@@ -30,13 +30,14 @@
 	height: var(--line-height);
 	background-color: var(--color);
 	border-radius: var(--radius);
+	
 }
 
 .nav-icon::before,
 .nav-icon::after {
 	content: '';
 	display: block;
-
+	
 	position: absolute;
 	left: 0;
 

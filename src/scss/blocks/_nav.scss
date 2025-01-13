@@ -11,9 +11,9 @@
 	@include tablet {
 		font-size: 13px;
 	}
-@include mobile {
-	display: none;
-	}
+	@include mobile {
+		display: none;
+		}	
 }
 
 .nav__list {
@@ -22,5 +22,5 @@
 
 	@include tablet {
 		gap: 15px;
-	}
+	}	
 }

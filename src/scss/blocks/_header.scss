@@ -16,8 +16,6 @@
 .header__links_socials{	
 	display: flex;
 	gap: 5px;
-
-
 }
 
 .header__links a{
@@ -72,6 +70,5 @@
   
   .hover-underline-animation.center:hover::after {
 	transform-origin: bottom center;
-  }
-   
+  }   
    

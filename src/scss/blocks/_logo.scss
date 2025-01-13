@@ -1,17 +1,18 @@
 .logo {
     width: 300px;
-@include tablet {
     @include tablet {
         width: 200px;
-    }
-}
-
-@include mobile {
-    width: 150px;
+    }   
     
-}
-}
+    @include mobile {
+        width: 150px;        
+    }
 
+    @include small-mobile{
+        width: 120px;
+    }
+
+}
 .logo-elem {    
     width: 70px;
     height: 70px;
