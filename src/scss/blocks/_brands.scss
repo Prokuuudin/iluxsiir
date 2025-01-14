@@ -2,7 +2,7 @@
    padding-top: 120px;
    margin-bottom: 100px;
    @include mobile {
-       padding-top: 30px;
+       padding-top: 40px;
        margin-bottom: 50px;
    }
 }
@@ -42,15 +42,6 @@ h2.title-2.brands__title{
         background-image: url('./../../img/bg-02@2x.jpg');
     }
 }
-
-// .brands__title-group {
-//     margin-left: 30px;
-//     margin-right: 30px;
-//     display: flex;
-//     flex-direction: row;
-//     text-align: center;
-//     justify-content: center;    
-// }
 
 .brands__desc {
     padding: 0 20px;
