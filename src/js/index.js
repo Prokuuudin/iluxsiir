@@ -1,6 +1,9 @@
 import setLanguage from './modules/setLanguage.js';
 setLanguage();
 
+import placeholderBehavior from './modules/placeholder-behavior.js';
+placeholderBehavior();
+
 import mobileNav from './modules/mobile-nav.js';
 mobileNav();
 
