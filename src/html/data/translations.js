@@ -128,9 +128,11 @@ const translations = {
       "online-store": "Veebipood",
       "contacts": "Kontaktid",
       "description": "Professionaalsed juuste ja küünte hooldustooted",
-      "info-btn": "Lisateave Iluxsiiri kohta",
-      "shop-btn": "Kauplus Tallinnas",
-      
+      "info-btn-prefix": "Lisateave Ilu",
+      "info-btn-suffix": "siir kohta",
+      "shop-btn-prefix": "Kauplus ",
+      "shop-btn-suffix": "allinnas",
+            
       // cookies agreement
       "agreement-header": "Me hindame teie privaatsust",
       "agreement-text": "Me kasutame küpsiseid, et parandada teie sirvimiskogemust, personaliseerides teile reklaame ja sisu liiklusanalüüsi põhjal. Vajutades <<Accept>>, nõustute küpsiste kasutamisega.",
@@ -141,25 +143,17 @@ const translations = {
     //   "info-title":`Ettevõtte kohta Ilu<span class="colored">X</span>siir`,
       "info-title-prefix": "Ettevõtte kohta Ilu",
       "info-title-suffix": "siir",
-      "info-text": `<p>Iluxsiir OÜ asutati 2023. aastal ning tegeleb professionaalsete juuste- ja küünehooldustoodete hulgi- ja jaekaubandusega. Oleme Eesti turul esindatud veebipoe teenuste kaudu https://shopforhair.ee/ee/. Samuti avati oktoobris 2024 meie esimene jaemüügipood Tallinnas -Mustakivikaubanduskeskuses(Mahtratn1, 13811Tallinn,Mustakivikeskus)..</p>
-      <p>Hoolimata ettevõtte noorusest on selle juhtkonnal aastakümnete pikkune kogemus iluturul. Jälgime aktiivselt ilutööstuse suundumusi ja uuendame regulaarselt oma tootevalikut, pakkudes oma klientidele õigeaegselt uusi tooteid ja nendega seotud eripakkumisi..</p>
-      <p>Iluxsiiri tootevalikus on üle 3500 toote maailma ja Euroopa juhtivatelt tootjatelt.
-          брендов. Teeme koostööd selliste tootjatega nagu Black Professional (Itaalia), FUDGE (Ühendkuningriik), Kallos (EL), Stapiz (EL), LUSSONI (EL), NIAMH (Itaalia), Dikson (Itaalia), Feetcalm (Hispaania), Beauty Image (Hispaania), Andis (USA) ja paljud teised.
-      </p>
-      <p>
-          Meie eesmärk on pakkuda juuste- ja küünehooldajatele kvaliteetseid tooteid konkurentsivõimeliste hindadega. Ja samuti pakkuda tavaklientidele igakülgset abi - professionaalse nõustamise näol mis tahes toodete kohta.
-      </p>
-      <p>
-          Meie prioriteedid on mugav ja kiire tarne 1-3 päeva jooksul.
-      </p>
-      <p>
-          Iluxsiir OÜ on pühendunud oma klientide probleemide lahendamisele. Ettevõtte pakkumises on eraldi programmid tavaklientidele, kutselistele ja äriklientidele - meil on igaühele midagi pakkuda, arvestades tema isiklikke huvisid.
-      </p>
-      <p>
-          Nüüd teate meist rohkem. Iluxsiir OÜ tänab teid selle teabe lugemise eest. Varsti kohtumiseni!
-      </p>`,
+      "info-paragraph-1": "Iluxsiir OÜ asutati 2023. aastal ning tegeleb professionaalsete juuste- ja küünehooldustoodete hulgi- ja jaekaubandusega. Oleme Eesti turul esindatud veebipoe teenuste kaudu https://shopforhair.ee/ee/. Samuti avati oktoobris 2024 meie esimene jaemüügipood Tallinnas -Mustakivikaubanduskeskuses(Mahtratn1, 13811Tallinn,Mustakivikeskus).",
+      "info-paragraph-2":"Hoolimata ettevõtte noorusest on selle juhtkonnal aastakümnete pikkune kogemus iluturul. Jälgime aktiivselt ilutööstuse suundumusi ja uuendame regulaarselt oma tootevalikut, pakkudes oma klientidele õigeaegselt uusi tooteid ja nendega seotud eripakkumisi.",
+      "info-paragraph-3":"Iluxsiiri tootevalikus on üle 3500 toote maailma ja Euroopa juhtivatelt tootjatelt.Teeme koostööd selliste tootjatega nagu Black Professional (Itaalia), FUDGE (Ühendkuningriik), Kallos (EL), Stapiz (EL), LUSSONI (EL), NIAMH (Itaalia), Dikson (Itaalia), Feetcalm (Hispaania), Beauty Image (Hispaania), Andis (USA) ja paljud teised.",
+      "info-paragraph-4":"Meie eesmärk on pakkuda juuste- ja küünehooldajatele kvaliteetseid tooteid konkurentsivõimeliste hindadega. Ja samuti pakkuda tavaklientidele igakülgset abi - professionaalse nõustamise näol mis tahes toodete kohta.",
+      "info-paragraph-5":"Meie prioriteedid on mugav ja kiire tarne 1-3 päeva jooksul.",
+      "info-paragraph-6":"Iluxsiir OÜ on pühendunud oma klientide probleemide lahendamisele. Ettevõtte pakkumises on eraldi programmid tavaklientidele, kutselistele ja äriklientidele - meil on igaühele midagi pakkuda, arvestades tema isiklikke huvisid.",
+    "info-paragraph-7": "Nüüd teate meist rohkem. Iluxsiir OÜ tänab teid selle teabe lugemise eest. Varsti kohtumiseni!",
       // modal-shop
-      "shop-title":`Ilu<span class="colored">X</span>siir`,
+    //   "shop-title":`Ilu<span class="colored">X</span>siir`,
+    "shop-title-prefix": "Ilu",
+    "shop-title-suffix": "siir",
       "shop-text": "Meil on hea meel tervitada teid Eesti esimeses Iluxsiir OÜ kaupluses - Mustakivi kaubanduskeskuses. Meil on hea meel pakkuda teile võimalust tutvuda meie toodetega, mille hulgast igaüks leiab endale meelepärase kas iseseisvalt või meie kogenud konsultantide abiga. Kui mõni toode ei ole saadaval, saate teha tellimuse koos kohaletoimetamisega ja saate kauba kätte kolme päeva jooksul. Toome teie tellitud kaubad sõna otseses mõttes teie uksele, mis tahes aadressile. Soovi korral saate kasutada ka sularahaautomaadi teenuseid",
       "address": "aadress: Mahtra 1, Tallinn, Estonia",
       "office-telephone": `kontoritelefon: <a href="tel:+37255947591">+372 55-947-591</a>`,
@@ -196,12 +190,14 @@ const translations = {
       "contacts-title":"Kontaktid",
       "office": "kontor",
       "shop": "kauplus",
-      "connect-form-title": "Võtke Iluxsiiriga ühendust vormi kaudu:",
+    //   "connect-form-title": "Võtke Iluxsiiriga ühendust vormi kaudu:",
+      "connect-form-title-prefix": "Võtke Ilu",
+      "connect-form-title-suffix": "siiriga ühendust vormi kaudu:",
       "fill-form-btn": "Täitke vorm",
       // form
     //   "form-title":"Kontakt ILUXSIIR",
       "form-title-prefix": "Võta ühendust ILU",
-      "form-title-suffix": "SIIR",
+      "form-title-suffix": "SIIR",          
       "placeholder-name": "Teie nimi*",
       "placeholder-email": "Teie posti*",
       "placeholder-phone": "Teie telefon*",
@@ -235,28 +231,18 @@ const translations = {
       // modal-info
     //   "info-title": `About the company Ilu<span class="colored">X</span>siir`,
       "info-title-prefix": "About the company Ilu",
-      "info-title-suffix": "siir",
-      "info-text": `<p>Iluxsiir OÜ was founded in 2023 and is a wholesaler and retailer of professional hair and nail care products. We are represented on the Estonian market through online shop services https://shopforhair.ee/ee/. Also in October 2024, our first retail shop was opened in Tallinn - in Mustakivi shopping centre(Mahtra tn 1, 13811 Tallinn, Mustakivi keskus).).</p>
-      <p>Despite the company's youth, its management team has decades of experience in the beauty market. We actively follow trends in the beauty industry and regularly update our product range, offering our customers new products and related special promotions in a timely manner.</p>
-      <p>Iluxsiir 's range includes more than 3,500 products from the world's leading international and European brands.
-          brands. We co-operate with such manufacturers as Black Professional (Italy), FUDGE (UK), Kallos (EU), Stapiz (EU), LUSSONI (EU), NIAMH (Italy), Dikson (Italy), Feetcalm (Spain), Beauty Image (Spain), Andis (USA) and many others.
-      </p>
-      <p>
-          Our mission is to provide hair and nail care professionals with quality products at competitive prices. And also, to provide comprehensive assistance to ordinary customers - in the form of professional advice on any of the products.
-      </p>
-      <p>
-          Our priorities are convenient and fast delivery within 1-3 days.
-      </p>
-      <p>
-          Iluxsiir OÜ is committed to solving its customers' problems. The company's offer includes separate programs for ordinary, professional and corporate clients - we have something to offer everyone, taking into account their personal interests.
-      </p>
-      <p>
-          Now you know more about us. Iluxsiir OÜ would like to thank you for reading this information. See you soon!
-      </p>`,
+      "info-title-suffix": "siir",      
+      "info-paragraph-1": "Iluxsiir OÜ was founded in 2023 and is a wholesaler and retailer of professional hair and nail care products. We are represented on the Estonian market through online shop services https://shopforhair.ee/ee/. Also in October 2024, our first retail shop was opened in Tallinn - in Mustakivi shopping centre(Mahtra tn 1, 13811 Tallinn, Mustakivi keskus).",
+      "info-paragraph-2":"Despite the company's youth, its management team has decades of experience in the beauty market. We actively follow trends in the beauty industry and regularly update our product range, offering our customers new products and related special promotions in a timely manner.",
+      "info-paragraph-3": "Iluxsiir 's range includes more than 3,500 products from the world's leading international and European brands. We co-operate with such manufacturers as Black Professional (Italy), FUDGE (UK), Kallos (EU), Stapiz (EU), LUSSONI (EU), NIAMH (Italy), Dikson (Italy), Feetcalm (Spain), Beauty Image (Spain), Andis (USA) and many others.",
+      "info-paragraph-4":"Our mission is to provide hair and nail care professionals with quality products at competitive prices. And, to provide comprehensive assistance to ordinary customers - in the form of professional advice on any of the products.",
+      "info-paragraph-5": "Our priorities are convenient and fast delivery within 1-3 days.",
+      "info-paragraph-6": "Iluxsiir OÜ is committed to solving its customers' problems. The company's offer includes separate programs for ordinary, professional and corporate clients - we have something to offer everyone, considering their personal interests.",
+      "info-paragraph-7": "Now you know more about us. Iluxsiir OÜ would like to thank you for reading this information. See you soon!",
       // modal-shop
       "shop-title":`Ilu<span class="colored">X</span>siir`,
       "shop-text": "We are pleased to welcome you to the first Iluxsiir OÜ shop in Estonia - in Mustakivi shopping Centre. We are pleased to introduce you to our products, among which everyone will find what they are looking for, either on their own or with the help of our experienced consultants. If any of the products are not available, you can place an order with delivery and receive the goods within three days. We bring your ordered goods literally to your door, to any address. If you wish, you can also use the services of cash dispensers",
-      "address": "adres: Mahtra 1, Tallinn, Estonia",
+      "address": "address: Mahtra 1, Tallinn, Estonia",
       "office-telephone": `office phone: <a href="tel:+37255947591">+372 55-947-591</a>`,
       "shop-telephone":`store phone: <a href="tel:+37255940771">+372 55-940-771</a>`,
       "office-email": `mail: <a href="mailto:office@iluxsiir.ee">office@iluxsiir.ee</a>`,
@@ -290,7 +276,9 @@ const translations = {
       "contacts-title":"Contacts",
       "office": "office",
       "shop": "shop",
-      "connect-form-title": "Contact Iluxsiir via the form:",
+      // "connect-form-title": "Contact Iluxsiir via the form:",
+      "connect-form-title-prefix": "Contact Ilu",
+      "connect-form-title-suffix": "siir via the form:",
       "fill-form-btn": "Fill in the form",
       // form
     //   "form-title":"Contact ILUXSIIR",
@@ -304,7 +292,8 @@ const translations = {
       "submit-btn": "Send",
       // footer
       "all-rights":"All rights reserved",
-    },      
+    },    
+    
   };
 
   export default translations
