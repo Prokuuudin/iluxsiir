@@ -299,3 +299,13 @@
         align-self: center;
     } 
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+.form__input._error {
+    border: 1px solid red;
+}
