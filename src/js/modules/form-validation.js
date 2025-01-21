@@ -1,189 +1,173 @@
-// function sendContactsForm() {
-//     "use strict"
-   
-//     document.addEventListener('DOMContentLoaded', function () {
-//         const form = document.getElementById('form');
-//         form.addEventListener('submit', formSend);
-
-//         async function formSend(e) {
-//             e.preventDefault();
-
-//             let error = formValidate(form);
-
-//             let formData = new FormData(form);
-
-//             if (error === 0) {
-//                 form.classList.add('_sending')
-//                 let response = await fetch('sendmail.php', {
-//                     method: 'POST',
-//                     body: formData
-//                 });
-//                 if (response.ok) {
-//                     let result = await response.json();
-//                     alert(result.message);
-//                     formPreview.innerHTML = '';
-//                     form.reset();
-//                     form.classList.remove('_sending');
-//                 } else {
-//                     alert('Ошибка!');
-//                     form.classList.remove('_sending');
-//                 }
-//             } else {
-//                 alert('Заполните обязательные поля');
-//             }
-
-//             function formValidate(form) {
-//                 let error = 0;
-//                 let formReq = document.querySelectorAll('._req');
-
-//                 for (let index = 0; index < formReq.length; index++) {
-//                     const input = formReq[index];
-//                     formRemoveError(input);
-
-//                     if (input.classList.contains('_email')) {
-//                         if (emailTest(input)) {
-//                             formAddError(input);
-//                             error++;
-//                         }
-//                     } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-//                         formAddError(input);
-//                         error++;
-//                     } else {
-//                         if (input.value === '') {
-//                             formAddError(input);
-//                             error++;
-//                         }
-//                     }
-//                 }
-//                 return error;
-//             }
-//             function formAddError(input) {
-//                 input.parentElement.classList.add('_error');
-//                 input.classList.add('_error');
-//             }
-//             function formRemoveError(input) {
-//                 input.parentElement.classList.remove('_error');
-//                 input.classList.remove('_error');
-//             }
-//             // Test email field function
-//             function emailTest(input) {
-//                 return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-//             }
-//         }
-//     });
-// }
-
-// export default sendContactsForm
-
 function sendContactsForm() {
-    "use strict"
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const form = document.getElementById('form');
-        const languageRadios = document.querySelectorAll('[data-key]');
-        const messages = {
-            ru: {
-                success: 'Форма успешно отправлена!',
-                error: 'Ошибка при отправке формы!',
-                required: 'Заполните обязательные поля'
-            },
-            en: {
-                success: 'Form submitted successfully!',
-                error: 'Error submitting the form!',
-                required: 'Please fill in the required fields correctly'
-            },
-            ee: {
-                success: 'Vorm edukalt saadetud!',
-                error: 'Vormi saatmisel ilmnes viga!',
-                required: 'Palun täitke nõutud väljad'
-            }
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("form");
+        const nameInput = document.getElementById("formName");
+        const emailInput = document.getElementById("formEmail");
+        const telInput = document.getElementById("formTel");
+        const agreementInput = document.getElementById("formAgreement");
+      
+        // Определение языка из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get("lang") || "ru"; // Язык по умолчанию - русский
+      
+        // Объект с переводами
+        const translations = {
+          ru: {
+            nameRequired: "Введите ваше имя",
+            emailRequired: "Введите вашу почту",
+            emailInvalid: "Введите корректный email",
+            telRequired: "Введите ваш телефон",
+            telInvalid: "Введите корректный телефон",
+            agreementRequired: "Вы должны принять условия политики конфиденциальности",
+            recaptchaRequired: "Пожалуйста, подтвердите, что вы не робот.",
+            success: "Форма успешно отправлена!",
+            error: "Произошла ошибка при отправке формы. Попробуйте снова.",
+            connectionError: "Ошибка подключения к серверу.",
+          },
+          en: {
+            nameRequired: "Enter your name",
+            emailRequired: "Enter your email",
+            emailInvalid: "Enter a valid email",
+            telRequired: "Enter your phone number",
+            telInvalid: "Enter a valid phone number",
+            agreementRequired: "You must accept the terms of the privacy policy",
+            recaptchaRequired: "Please confirm you are not a robot.",
+            success: "Form submitted successfully!",
+            error: "An error occurred while submitting the form. Try again.",
+            connectionError: "Connection error.",
+          },
+          ee: {
+            nameRequired: "Sisestage oma nimi",
+            emailRequired: "Sisestage oma e-post",
+            emailInvalid: "Sisestage kehtiv e-post",
+            telRequired: "Sisestage oma telefoninumber",
+            telInvalid: "Sisestage kehtiv telefoninumber",
+            agreementRequired: "Peate nõustuma privaatsuspoliitika tingimustega",
+            recaptchaRequired: "Palun kinnitage, et te ei ole robot.",
+            success: "Vorm edukalt saadetud!",
+            error: "Vormi saatmisel ilmnes tõrge. Proovige uuesti.",
+            connectionError: "Ühenduse viga.",
+          },
         };
-
-        let currentLang = 'ru'; // Язык по умолчанию
-
-        // Обновление текущего языка при выборе радиокнопки
-        languageRadios.forEach(radio => {
-            radio.addEventListener('change', () => {
-                if (radio.checked) {
-                    currentLang = radio.dataset.key;
-                }
-            });
+      
+        const t = translations[lang]; // Текущие переводы
+      
+        // Функция для отображения ошибки
+        const showError = (input, message) => {
+          input.classList.add("error");
+          const errorLabel = document.createElement("span");
+          errorLabel.classList.add("error-message");
+          errorLabel.textContent = message;
+          input.parentElement.appendChild(errorLabel);
+        };
+      
+        // Функция для очистки ошибок
+        const clearErrors = (input) => {
+          input.classList.remove("error");
+          const errorMessages = input.parentElement.querySelectorAll(".error-message");
+          errorMessages.forEach((msg) => msg.remove());
+        };
+      
+        // Проверка имени
+        const validateName = () => {
+          const name = nameInput.value.trim();
+          clearErrors(nameInput);
+          if (name === "") {
+            showError(nameInput, t.nameRequired);
+            return false;
+          }
+          return true;
+        };
+      
+        // Проверка email
+        const validateEmail = () => {
+          const email = emailInput.value.trim();
+          clearErrors(emailInput);
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (email === "") {
+            showError(emailInput, t.emailRequired);
+            return false;
+          } else if (!emailRegex.test(email)) {
+            showError(emailInput, t.emailInvalid);
+            return false;
+          }
+          return true;
+        };
+      
+        // Проверка телефона
+        const validateTel = () => {
+          const tel = telInput.value.trim();
+          clearErrors(telInput);
+          const telRegex = /^\+?[0-9]{10,15}$/;
+          if (tel === "") {
+            showError(telInput, t.telRequired);
+            return false;
+          } else if (!telRegex.test(tel)) {
+            showError(telInput, t.telInvalid);
+            return false;
+          }
+          return true;
+        };
+      
+        // Проверка чекбокса согласия
+        const validateAgreement = () => {
+          clearErrors(agreementInput);
+          if (!agreementInput.checked) {
+            showError(agreementInput, t.agreementRequired);
+            return false;
+          }
+          return true;
+        };
+      
+        // Проверка reCAPTCHA
+        const validateRecaptcha = () => {
+          const recaptchaResponse = grecaptcha.getResponse();
+          if (recaptchaResponse === "") {
+            alert(t.recaptchaRequired);
+            return false;
+          }
+          return true;
+        };
+      
+        // Валидация формы
+        const validateForm = () => {
+          const isNameValid = validateName();
+          const isEmailValid = validateEmail();
+          const isTelValid = validateTel();
+          const isAgreementValid = validateAgreement();
+          const isRecaptchaValid = validateRecaptcha();
+      
+          return isNameValid && isEmailValid && isTelValid && isAgreementValid && isRecaptchaValid;
+        };
+      
+        // Отправка формы
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          clearErrors(form);
+      
+          if (validateForm()) {
+            const formData = new FormData(form);
+            try {
+              const response = await fetch("https://your-server-endpoint.com/submit", {
+                method: "POST",
+                body: formData,
+              });
+      
+              if (response.ok) {
+                alert(t.success);
+                form.reset(); // Очистка формы
+                grecaptcha.reset(); // Сброс reCAPTCHA
+              } else {
+                alert(t.error);
+              }
+            } catch (error) {
+              console.error("Ошибка:", error);
+              alert(t.connectionError);
+            }
+          }
         });
-
-        form.addEventListener('submit', formSend);
-
-        async function formSend(e) {
-            e.preventDefault();
-
-            let error = formValidate(form);
-            let formData = new FormData(form);
-
-            if (error === 0) {
-                form.classList.add('_sending');
-                try {
-                    let response = await fetch('sendmail.php', {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    if (response.ok) {
-                        let result = await response.json();
-                        alert(messages[currentLang].success);
-                        form.reset(); // Сброс формы
-                        form.classList.remove('_sending');
-                    } else {
-                        alert(messages[currentLang].error);
-                        form.classList.remove('_sending');
-                    }
-                } catch (error) {
-                    alert(messages[currentLang].error);
-                    form.classList.remove('_sending');
-                }
-            } else {
-                alert(messages[currentLang].required);
-            }
-        }
-
-        function formValidate(form) {
-            let error = 0;
-            let formReq = document.querySelectorAll('._req');
-
-            for (let index = 0; index < formReq.length; index++) {
-                const input = formReq[index];
-                formRemoveError(input);
-
-                if (input.classList.contains('_email')) {
-                    if (emailTest(input)) {
-                        formAddError(input);
-                        error++;
-                    }
-                } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-                    formAddError(input);
-                    error++;
-                } else {
-                    if (input.value === '') {
-                        formAddError(input);
-                        error++;
-                    }
-                }
-            }
-            return error;
-        }
-
-        function formAddError(input) {
-            input.parentElement.classList.add('_error');
-            input.classList.add('_error');
-        }
-
-        function formRemoveError(input) {
-            input.parentElement.classList.remove('_error');
-            input.classList.remove('_error');
-        }
-
-        function emailTest(input) {
-            return !/^\w+([\.-]?\w+)*@[\w-]+(\.[\w-]{2,8})+$/.test(input.value);
-        }
-    });
+      });
+      
 }
 
 export default sendContactsForm;

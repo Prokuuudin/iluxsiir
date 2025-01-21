@@ -30,7 +30,7 @@ a.btn {
 
 	@include mobile {
 		padding: 8px 9px;
-		min-width: unset;
+		min-width: 120px;
 		font-size: 14px;
 	}
 
