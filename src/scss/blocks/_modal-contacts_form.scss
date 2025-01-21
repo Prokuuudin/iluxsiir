@@ -236,7 +236,6 @@
         line-height: 1;      
     }
 }
-
 .checkbox__label::before{
     pointer-events: all;
     content:'';
@@ -272,8 +271,7 @@
 .form__footer{
     width: 100%;
     margin-top: 40px;
-    padding: 20px;
-    padding-top: 0;
+    padding: 0 20px 10px;
     display: flex;
     justify-content:space-around;
     align-items: center;
@@ -300,16 +298,7 @@
     } 
 }
 
-.error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    display: block;
-}
 .form__input._error {
     border: 1px solid red;
 }
 
-.error {
-    border: 2px solid red;
-}
