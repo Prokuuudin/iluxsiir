@@ -3,7 +3,7 @@ echo '<pre>';
 var_dump($_POST);
 
 $url = 'https://google.com/recaptcha/api/siteverify';
-$data = ['secret' => '6LeJwZUqAAAAAMrbxL2n3XUKihLOCFePHqIpYQR9', 'response' => $_POST['g-recaptcha-response']];
+$data = ['secret' => '', 'response' => $_POST['g-recaptcha-response']];
 
 $options = [
     'http' => [
