@@ -58,6 +58,7 @@ h2.proposals__title.title-2 {
     
     @include mobile {
         gap: 0;
+        margin-top: 60px;
     }
 }
 
@@ -77,7 +78,7 @@ h2.proposals__title.title-2 {
     @include mobile {
         padding-top: 0;
         margin-bottom: 40px;
-        gap: 0;
+        gap: 0;        
     }
 }
 
@@ -105,7 +106,7 @@ h2.proposals__title.title-2 {
     @include mobile {
         display: flex;
         flex-direction: column;
-        bottom: -40px;
+        bottom: -100px;
         
     }
  }

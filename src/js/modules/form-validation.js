@@ -82,7 +82,7 @@ function sendContactsForm() {
           const isRecaptchaValid = validateRecaptcha();
 
           if (!isNameValid || !isEmailValid || !isTelValid || !isAgreementValid || !isRecaptchaValid) {
-              alert("You did not fill in all the required fields");
+              alert("Please, fill in all the required fields correctly!");
               return false;
           }
 
