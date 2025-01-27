@@ -236,6 +236,11 @@
         line-height: 1;      
     }
 }
+
+checkbox__box-span {
+    display: inline-block;
+}
+
 .checkbox__label::before{
     pointer-events: all;
     content:'';
@@ -254,6 +259,8 @@
     cursor: pointer;
 }
 
+
+
 .checkbox__label::after{
     content: "✔";
     color: #fff;
@@ -266,6 +273,10 @@
     font-weight: bold;
     transform: scale(0);
     transition: all 0.2s ease-in;
+
+    @include mobile {
+        top: 3px;
+    }
 }
 
 .form__footer{
