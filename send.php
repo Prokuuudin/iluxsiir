@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
 
     // Настройки
-    $recaptchaSecret = '6LeJwZUqAAAAAB2OZ8xlgxRhVhWqxgN3521DnMX2';
+    $recaptchaSecret = '';
     $errors = [];
 
     // Функция очистки ввода
