@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\Exception;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
 
-    $recaptchaSecret = '6LeJwZUqAAAAAB2OZ8xlgxRhVhWqxgN3521DnMX2';
+    $recaptchaSecret = '';
     $errors = [];
 
     function clean_input($data) {
