@@ -13,35 +13,51 @@ use PHPMailer\PHPMailer\Exception;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
 
-    $recaptchaSecret = '';
-    $errors = [];
+    $config = include('config.php');
+    $recaptchaSecret = $config['recaptcha_secret'];
+    $smtpUser = $config['smtp_user'];
+    $smtpPass = $config['smtp_pass'];
 
     function clean_input($data) {
         return htmlspecialchars(trim($data));
     }
 
-    $name = isset($_POST['name']) ? clean_input($_POST['name']) : '';
-    $email = isset($_POST['email']) ? clean_input($_POST['email']) : '';
-    $tel = isset($_POST['tel']) ? clean_input($_POST['tel']) : '';
-    $message = isset($_POST['message']) ? clean_input($_POST['message']) : '';
-    $agreement = isset($_POST['agreement']) ? $_POST['agreement'] : null;
-    $recaptchaResponse = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
+    $name = clean_input($_POST['name'] ?? '');
+    $email = clean_input($_POST['email'] ?? '');
+    $tel = clean_input($_POST['tel'] ?? '');
+    $message = clean_input($_POST['message'] ?? '');
+    $agreement = $_POST['agreement'] ?? '';
+    $recaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 
-    // Валидация полей
+    $errors = [];
+
+    // Validate name
     if (empty($name)) {
-        $errors[] = 'Please enter your name.';
-    }
-    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = 'Please enter a valid email address.';
-    }
-    if (empty($tel) || !preg_match('/^\+?[0-9\s\-]{7,15}$/', $tel)) {
-        $errors[] = 'Please enter a valid phone number.';
-    }
-    if (!$agreement) {
-        $errors[] = 'You must agree to the privacy policy.';
+        $errors[] = 'Name is required.';
+    } elseif (!preg_match("/^[a-zA-Z-' ]+$/", $name)) {
+        $errors[] = 'Invalid name format.';
     }
 
-    // Проверка reCAPTCHA
+    // Validate email
+    if (empty($email)) {
+        $errors[] = 'Email is required.';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format.';
+    }
+
+    // Validate phone
+    if (empty($tel)) {
+        $errors[] = 'Phone number is required.';
+    } elseif (!preg_match("/^\+?[0-9]{10,15}$/", $tel)) {
+        $errors[] = 'Invalid phone number format.';
+    }
+
+    // Validate agreement checkbox
+    if (empty($agreement)) {
+        $errors[] = 'You must accept the privacy policy.';
+    }
+
+    // Validate reCAPTCHA
     if (empty($recaptchaResponse)) {
         $errors[] = 'Please confirm that you are not a robot.';
     } else {
@@ -54,26 +70,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    // Если есть ошибки, отправляем их в JSON-ответе
     if (!empty($errors)) {
         echo json_encode(['success' => false, 'errors' => $errors]);
         exit;
     }
 
-    // Настройка PHPMailer
+    // Send email via PHPMailer
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'prokuuudin@gmail.com';
-        $mail->Password = 'qxwk jtkv mpak zfys'; // Хранить пароль в коде НЕБЕЗОПАСНО! Лучше использовать ENV-переменные
+        $mail->Username = $smtpUser;
+        $mail->Password = $smtpPass;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         $mail->setFrom($email, $name);
-        $mail->addAddress('prokuuudin@gmail.com'); // Email, куда отправлять данные
-
+        $mail->addAddress($smtpUser);
         $mail->isHTML(false);
         $mail->Subject = 'New message from the website';
         $mail->Body = "Name: $name\nEmail: $email\nPhone: $tel\nMessage:\n$message";

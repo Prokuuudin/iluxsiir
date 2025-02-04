@@ -25,8 +25,8 @@ getModalShop();
 import getModalForm from './modules/modal-form.js';
 getModalForm();
 
-// import sendContactsForm from './modules/form-validation.js';
-// sendContactsForm();
+import sendContactsForm from './modules/form-validation.js';
+sendContactsForm();
 
 import getSwiperWave from './modules/swiper-wave.js';
 getSwiperWave();
