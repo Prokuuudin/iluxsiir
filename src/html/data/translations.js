@@ -1,27 +1,3 @@
-// const langMessages = {
-//     ru: {
-//         "name-alert": "Имя должно быть от 2 до 50 символов.",
-//         "email-alert": "Введите корректный email.",
-//         "tel-alert": "Введите корректный номер телефона.",
-//         "agreement-alert": "Вы должны принять условия.",
-//         "captcha-alert": "Подтвердите, что вы не робот.",
-//     },
-//     en: {
-//         "name-alert": "Name must be between 2 and 50 characters.",
-//         "email-alert": "Please enter a valid email.",
-//         "tel-alert": "Please enter a valid phone number.",
-//         "agreement-alert": "You must accept the terms.",
-//         "captcha-alert": "Please verify that you are not a robot.",
-//     },
-//     ee: {
-//         "name-alert": "Nimi peab olema 2 kuni 50 tähemärki.",
-//         "email-alert": "Sisestage kehtiv e-post.",
-//         "tel-alert": "Sisestage kehtiv telefoninumber.",
-//         "agreement-alert": "Peate nõustuma tingimustega.",
-//         "captcha-alert": "Kinnitage, et te ei ole robot.",
-//     },
-// };
-
 const translations = {
     ru: {
       // meta-tags    
@@ -115,8 +91,7 @@ const translations = {
       "all-rights":"Все правa защищены",
     },
    
-    ee: {        
-        
+    ee: {      
       "desc-content":"professionaalsed juukse- ja küünehooldustooted, hulgi- ja jaemüük, era- ja ärikliendid, veebipood koos kohaletoimetamisega Tallinnas",
       "keywords-content":"juuste, küüned, hooldustooted, tarne, Tallinn, professionaalsed meistrid, pakkumine salongidele",
       "landing-title": "ILUXSIIR professionaalne juuste- ja küünekosmeetika",
@@ -208,7 +183,7 @@ const translations = {
     },
              
     en: {
-      "desc-content":  "professional hair and nail care products, available wholesale and retail, for private and corporate clients, with an online store offering delivery in Tallinn",
+      "desc-content": "professional hair and nail care products, available wholesale and retail, for private and corporate clients, with an online store offering delivery in Tallinn",
       "keywords-content":"hair, nails, care products, delivery, Tallinn, professional masters, offer to salons",
       "landing-title": "ILUXSIIR professional cosmetics for hair and nails",
       // nav-bar

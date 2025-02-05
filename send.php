@@ -43,6 +43,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = 'Email is required.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Invalid email format.';
+    } elseif (!preg_match("/^[^\s@]+@[^\s@]+\.[^\s@]+$/", $email)) {
+        $errors[] = 'Invalid email structure.';
+    } else {
+        $domain = substr(strrchr($email, "@"), 1);
+        if (!checkdnsrr($domain, "MX")) {
+            $errors[] = 'Email domain does not exist.';
+        }
     }
 
     // Validate phone
