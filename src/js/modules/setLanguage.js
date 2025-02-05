@@ -21,6 +21,17 @@ function setLanguage() {
       }
     });
 
+    // Обновление метатегов description и keywords
+    const metaDesc = document.querySelector('meta[name="description"]');
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+
+    if (metaDesc && translations[language]["desc-content"]) {
+      metaDesc.setAttribute("content", translations[language]["desc-content"]);
+    }
+    if (metaKeywords && translations[language]["keywords-content"]) {
+      metaKeywords.setAttribute("content", translations[language]["keywords-content"]);
+    }
+
     // Сохранение выбранного языка в localStorage
     localStorage.setItem("selectedLanguage", language);
 
