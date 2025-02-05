@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validate phone
     if (empty($tel)) {
         $errors[] = 'Phone number is required.';
-    } elseif (!preg_match("/^\+?[0-9]{10,15}$/", $tel)) {
+    } elseif (!preg_match("/^\\+?[0-9]{10,15}$/", $tel)) {
         $errors[] = 'Invalid phone number format.';
     }
 
@@ -85,12 +85,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Password = $smtpPass;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
+        
+        $mail->CharSet = 'UTF-8'; // Устанавливаем кодировку письма
+        $mail->Encoding = 'base64'; // Кодируем тело письма в base64
 
-        $mail->setFrom($email, $name);
-        $mail->addAddress($smtpUser);
+        $mail->setFrom($email, '=?UTF-8?B?'.base64_encode($name).'?=');
+        $mail->addAddress('office@iluxsiir.ee');
         $mail->isHTML(false);
-        $mail->Subject = 'New message from the website';
+        $mail->Subject = '=?UTF-8?B?'.base64_encode('New message from the website').'?=';
         $mail->Body = "Name: $name\nEmail: $email\nPhone: $tel\nMessage:\n$message";
+        $mail->AltBody = strip_tags($mail->Body);
 
         $mail->send();
         echo json_encode(['success' => true, 'message' => 'The form was successfully submitted!']);
